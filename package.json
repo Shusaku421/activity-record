@@ -1,0 +1,20 @@
+{
+  "name": "git-workspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shusaku421/activity-record.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shusaku421/activity-record/issues"
+  },
+  "homepage": "https://github.com/Shusaku421/activity-record#readme"
+}
