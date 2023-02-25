@@ -1,10 +1,15 @@
 {
-  "name": "git-workspace",
+  "name": "my-webpack-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "My webpack project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode=production --node-env=production",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "watch": "webpack --watch",
+    "serve": "webpack serve"
   },
   "repository": {
     "type": "git",
@@ -18,8 +23,16 @@
   },
   "homepage": "https://github.com/Shusaku421/activity-record#readme",
   "dependencies": {
-    "@webpack-cli/generators": "^3.0.1",
+    "@webpack-cli/generators": "^3.0.1"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "prettier": "^2.8.4",
     "ts-loader": "^9.4.2",
-    "webpack": "^5.75.0"
+    "typescript": "^4.9.5",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1",
+    "workbox-webpack-plugin": "^6.5.4"
   }
 }
