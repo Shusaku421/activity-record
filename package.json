@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/Shusaku421/activity-record/issues"
   },
-  "homepage": "https://github.com/Shusaku421/activity-record#readme"
+  "homepage": "https://github.com/Shusaku421/activity-record#readme",
+  "dependencies": {
+    "@webpack-cli/generators": "^3.0.1",
+    "ts-loader": "^9.4.2",
+    "webpack": "^5.75.0"
+  }
 }
