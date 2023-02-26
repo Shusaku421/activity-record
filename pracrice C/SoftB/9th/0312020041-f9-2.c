@@ -1,8 +1,13 @@
-/*2020/12/29 0312020041 Œ˜‰ªüì*/
-/*•K{‰Û‘èf9-2*/
+/*è‡ªç”±èª²é¡Œf9-2*/
+/*
+è¥¿æš¦*yå¹´*mæœˆ*dæ—¥ä›¾æ—¥ä»˜ã‚’â€œå‰ã®æ—¥â€ã‚ã‚‹ã„ã¯
+â€œæ¬¡ã®æ—¥â€ã®æ—¥ä»˜ã«æ›´æ–°ã™ã‚‹é–¢æ•°ã‚’ä½œæˆã›ã‚ˆï¼
+*/
+
+
 #include<stdio.h>
 void decrement_date(int *y,int *m,int *d){
-	if ((*y % 400 == 0 || (*y % 4 == 0 && *y%100 != 0)) && (*m == 3 && *d == 1)) { /*‘O‚Ì“ú*/
+	if ((*y % 400 == 0 || (*y % 4 == 0 && *y%100 != 0)) && (*m == 3 && *d == 1)) { /*ï¿½Oï¿½Ì“ï¿½*/
 		*m = 2; *d = 29;
 	}
 	else {
@@ -24,10 +29,10 @@ void decrement_date(int *y,int *m,int *d){
 			}
 		}
 	}
-	printf("“ú•t‚ğ ¼—ï%d”N%dŒ%d“ú ‚ÖXV\n", *y, *m, *d);
+	printf("å‰ã®æ—¥ã¯ %d å¹´ %d æœˆ %d æ—¥ã§ã™\n", *y, *m, *d);
 }
 
-void increment_date(int* y, int* m, int* d) {/*Ÿ‚Ì“ú*/
+void increment_date(int* y, int* m, int* d) {
 	if ((*y % 400 == 0 || (*y % 4 == 0 && *y % 100 != 0)) && (*m == 2 && *d == 28 || *d==29)) {
 			*m = 2; *d = *d+1;
 			if (*d == 30) {
@@ -54,43 +59,26 @@ void increment_date(int* y, int* m, int* d) {/*Ÿ‚Ì“ú*/
 			}
 		}
 	}
-	printf("“ú•t‚ğ ¼—ï%d”N%dŒ%d“ú ‚ÖXV\n", *y, *m, *d);
+	printf("æ¬¡ã®æ—¥ã¯ %d å¹´ %d æœˆ %d æ—¥ã§ã™\n", *y, *m, *d);
 }
 
 int main(void) {
 	int i;
-	int* a, * b, * c;
-	printf("”NŒ“ú‚Ì“ü—Í\n");
-	printf("”N:");  scanf("%d", &a);
-	printf("Œ:");  scanf("%d", &b);
-	printf("“ú:");  scanf("%d", &c);
+	int *y, *m, *d;
+	printf("æ—¥ä»˜ã‚’å…¥åŠ›\n");
+	printf("å¹´:");  scanf("%d", &y);
+	printf("æœˆ:");  scanf("%d", &m);
+	printf("æ—¥:");  scanf("%d", &d);
 	printf("\n");
-	printf("“ü—Í‚³‚ê‚½“ú•t:¼—ï%d”N%dŒ%d“ú\n", a, b, c);
+	printf("%d å¹´ %d æœˆ %d æ—¥ãŒå…¥åŠ›ã•ã‚Œã¾ã—ãŸ\n", y, m, d);
 	printf("\n");
-	printf("Ÿ‚Ì“ú‚ÉXV‚·‚éê‡‚Í1\n‘O‚Ì“ú‚ÉXV‚·‚éê‡‚Í0‚ğ“ü—Í\n");
-	printf("1or0:");  scanf("%d", &i);
+	printf("æ¬¡ã®æ—¥â‡’ 1, å‰ã®æ—¥â‡’ 0 ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„\n");
+	printf("1 or 0:");  scanf("%d", &i);
 	if (i == 0) {
-		decrement_date(&a, &b, &c);
+		decrement_date(&y, &m, &d);
 	}
 	else {
-		increment_date(&a, &b, &c);
+		increment_date(&y, &m, &d);
 	}
 	return 0;
 }
-
-/*
-”NŒ“ú‚Ì“ü—Í
-”N:2021
-Œ:1
-“ú:1
-
-“ü—Í‚³‚ê‚½“ú•t:¼—ï2021”N1Œ1“ú
-
-Ÿ‚Ì“ú‚ÉXV‚·‚éê‡‚Í1
-‘O‚Ì“ú‚ÉXV‚·‚éê‡‚Í0‚ğ“ü—Í
-1or0:0
-“ú•t‚ğ ¼—ï2020”N12Œ31“ú ‚ÖXV
-
-‚±‚ÌƒEƒBƒ“ƒhƒE‚ğ•Â‚¶‚é‚É‚ÍA”CˆÓ‚ÌƒL[‚ğ‰Ÿ‚µ‚Ä‚­‚¾‚³‚¢...
-
-*/
