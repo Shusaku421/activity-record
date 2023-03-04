@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>Google Maps [favorite]</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="ex03.css" />
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCum_9V4uwOC2mP5Hh4YM6_RYUO2a7cRTY" type="text/javascript"></script>
+        <script src="./favoritemap.js" type="text/javascript"></script>
+    </head>
+
+    <body onload="initialize();" class="map"> <!-- HTMLを読み込んだとき地図を表示 -->
+ <nav id="navi1">
+                <ul>
+                    <li><a href="profile.html">ホーム</a></li>
+                </ul>
+            </nav>
+        <article>
+            <p>お気に入りの場所</p>
+            <div id="map_canvas" style="width:800px; height:600px;"></div>
+        </article>
+    </body>
+</html>
